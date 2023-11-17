@@ -1,0 +1,6 @@
+<a href="{% url 'upload_post' %}"><h1>Create a post</h1></a>
+<form method="POST" enctype="multipart/form-data">
+{% csrf_token %}
+{{form.as_p}}
+<button type="submit">Submit New Post</button>
+</form>
